@@ -14,17 +14,19 @@
 <body>
     @{
         try {
-            WebMail.SmtpServer = "leaf.arvixe.com";
-            WebMail.SmtpPort = 587;
-            WebMail.EnableSsl = false;
-            WebMail.UserName = "brad@lubbockwinestest.com";
-            WebMail.Password = "mskid001";
-            WebMail.From = "brad@lubbockwinestest.com";
+            WebMail.SmtpServer = "E-MAIL SERVER NAME";
+            WebMail.SmtpPort = 587; // Use a common SMTP Port
+            WebMail.EnableSsl = false; // Contact host to determine the settings you need to use here
+            WebMail.UserName = "brad@tomballpc.com";  // Enter full e-mail address
+            WebMail.Password = "PASSWORD";  //  Enter the password of the e-mail account
+            WebMail.From = "brad@tomballpc.com"; // Enter the e-mail address you'd like the e-mail to appear from
             
-            WebMail.Send("brad@lubbockwinestest.com", "Email submission",
-                Model.Name + " sent you an email");
+            WebMail.Send("brad@tomballpc.com", "Email submission",
+                Model.Name + " sent you an email"); // This line is where you add the body of the message.
+            
+            // This line will let you know if the application cannot send the e-mail.
         } catch (Exception) {
-            @:<b>Sorry we couldn't send the email to confirm</b>
+            @:<b>Sorry we couldn't send the email to confirm</b> 
     }
     }
 </body>
