@@ -1,0 +1,21 @@
+﻿<!-- This is for the Razor view engine: Tells Razor that we are not using a MasterPage-->
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @ViewBag.Greeting World
+        <p>Here is a test e-mail application in MVC - C# 5 - .NET Framework 4.5<br />
+        </p>
+        @Html.ActionLink("Take me there!", "RsvpForm")
+    </div>
+</body>
+</html>
